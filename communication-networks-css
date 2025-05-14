@@ -1,0 +1,72 @@
+/* research-cesg page */
+
+/* Container for the section to help manage layout and clearing floats */
+.responsive-content-section {
+  overflow: hidden; /* This will contain the floated image (clearfix hack) */
+  padding-bottom: 1px; /* Ensures bottom margin of children are contained */
+}
+
+/* Responsive Image Styling */
+img.responsive-image.alignleft {
+  float: left;
+  margin-right: 20px; /* Space to the right of the image */
+  margin-bottom: 10px; /* Space below the image */
+  max-width: 218px; /* Original width as maximum */
+  width: 40%; /* Allow image to take a percentage of its container's width */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+/* Text Styling */
+.network-description {
+  line-height: 1.6; /* For better readability */
+  margin-bottom: 1em;
+}
+
+.faculty-list {
+  text-align: left; 
+  font-size: 1.0625rem; /* Approx 17px if base font-size is 16px. (17/16 = 1.0625) */
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+/* Horizontal Rule Styling */
+hr.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: #ccc; /* A light gray color */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) { /* Adjust breakpoint as needed (e.g., for tablets) */
+  img.responsive-image.alignleft {
+    width: 50%; /* Image can be a bit larger percentage-wise on medium screens */
+  }
+}
+
+@media (max-width: 480px) { /* Adjust breakpoint as needed (e.g., for mobile phones) */
+  img.responsive-image.alignleft {
+    float: none; /* Remove the float */
+    display: block; /* Make it a block element */
+    width: 80%; /* Adjust width for stacked layout */
+    max-width: 250px; /* Ensure it doesn't get too large even at 80% */
+    margin-left: auto; /* Center the image */
+    margin-right: auto;
+    margin-bottom: 15px; /* Space below the image when stacked */
+  }
+	
+	.network-description,
+  .faculty-list {
+    text-align: center; /* Optional: Center text when image is stacked above */
+    /* If you prefer left-align on mobile for .faculty-list: */
+    /* .faculty-list { text-align: left; } */
+  }
+	
+	.faculty-list {
+    font-size: 1rem; /* Approx 16px, can adjust for smaller screens */
+  }
+}
+
+/* end research-cesg page */
